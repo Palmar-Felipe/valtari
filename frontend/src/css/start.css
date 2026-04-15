@@ -51,7 +51,7 @@
 .video-fondo button {
   position: absolute;
   top: 60%;
-  left: 50%;
+  left: 45%;
   transform: translate(-50%, -50%);
   padding: 10px 20px;
   font-size: 1.2em;
@@ -60,14 +60,33 @@
   border: 1px solid #ffffff;
   border-radius: 5px;
   cursor: pointer;
+  transform: rotateX(90deg);
+  opacity: 0;
+  animation: flipDown 4s ease-out forwards;
+
 }
+
+@keyframes flipDown {
+  0% {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+
+
+
 
 footer{
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 100px;
-    background-color: #000000;
+    background-color: #101828;
     color: white;
     text-align: center;
     line-height: 50px;

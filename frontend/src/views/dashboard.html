@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+<body>
+  <header class="topbar">
+    <button class="hbtn" id="hbtn" aria-label="Abrir menú">
+      <section class="lines">
+        <span></span>
+        <span></span>
+        <span></span>
+      </section>
+
+      <p class="menu-text">Menú</p>
+    </button>
+    <h2 class="titulo">P.L.R Automotriz</h2>
+    <video autoplay muted loop>
+      <source src="../video/Quitar_Lluvia_Genera_Video (1).mp4" type="video/mp4">
+    </video>
+  </header>
+ 
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay"></div>
+ 
+  <!-- PANEL LATERAL -->
+  <nav class="panel" id="panel" aria-label="Menú principal">
+    <div class="panel-top">
+      <span class="panel-logo">MiMarca</span>
+      <button class="close-btn" id="close-btn" aria-label="Cerrar menú">&#x2715;</button>
+    </div>
+ 
+    <div class="nav-items">
+ 
+      <div class="nav-item" data-sub="sub-modelos">
+        Modelos <span class="chevron">&#x203A;</span>
+      </div>
+      <div class="sub-items" id="sub-modelos">
+        <div class="sub-item">718</div>
+        <div class="sub-item">911</div>
+        <div class="sub-item">Taycan</div>
+        <div class="sub-item">Cayenne</div>
+        <div class="sub-item">Macan</div>
+        <div class="sub-item">Panamera</div>
+      </div>
+ 
+      <div class="nav-item" data-sub="sub-compra">
+        Asesoramiento y compra <span class="chevron">&#x203A;</span>
+      </div>
+      <div class="sub-items" id="sub-compra">
+        <div class="sub-item">Configurador</div>
+        <div class="sub-item">Financiamiento</div>
+        <div class="sub-item">Seminuevos</div>
+      </div>
+ 
+      <div class="nav-item" data-sub="sub-servicios">
+        Servicios <span class="chevron">&#x203A;</span>
+      </div>
+      <div class="sub-items" id="sub-servicios">
+        <div class="sub-item">Mantenimiento</div>
+        <div class="sub-item">Garantía</div>
+      </div>
+ 
+      <div class="nav-item">
+        Experiencia <span class="chevron">&#x203A;</span>
+      </div>
+ 
+      <div class="nav-item">
+        Concesionario <span class="chevron">&#x203A;</span>
+      </div>
+ 
+    </div>
+  </nav>
+ 
+  <!-- CONTENIDO -->
+  <main class="page-content">
+    <h1>Bienvenido</h1>
+    <p>Haz clic en el ícono del menú en la esquina superior izquierda para navegar. El panel se desliza desde la izquierda con un overlay oscuro de fondo. Puedes cerrarlo haciendo clic en la X o en el área oscura.</p>
+  </main>
+
+  <footer></footer>
+ <script src="../js/dashnoard.js"></script>
+</body>
+</html>
