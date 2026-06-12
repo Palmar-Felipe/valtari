@@ -73,7 +73,7 @@ document.querySelectorAll('.nav-item[data-sub]').forEach(item => {
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
-
+let vehiculoActual = null;
 
 
 async function cargarVehiculo() {
@@ -86,7 +86,7 @@ async function cargarVehiculo() {
 
         const vehiculo = await respuesta.json();
 
-
+        vehiculoActual = vehiculo;
 
       
 
