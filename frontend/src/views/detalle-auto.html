@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle Vehículo</title>
+
+  <link rel="stylesheet" href="../css/detalle-auto.css">
+
+  <!-- ICONOS -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="topbar">
+        <button class="hbtn" id="hbtn" aria-label="Abrir menú">
+            <section class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </section>
+
+            <p class="menu-text">Menú</p>
+        </button>
+    
+        
+        
+        
+        <!-- OVERLAY -->
+        <div class="overlay" id="overlay"></div>
+        <nav class="panel" id="panel" aria-label="Menú principal">
+            <div class="panel-top">
+                <button class="close-btn" id="close-btn" aria-label="Cerrar menú">&#x2715;</button>
+            </div>
+        
+            <div class="nav-items">
+        
+                <div class="nav-item" data-sub="sub-modelos">
+                    Aliados Automotrices <span class="chevron">&#x203A;</span>
+                </div>
+                <div class="sub-items" id="sub-modelos">
+                    <a href="">
+                        <div class="sub-item">Chevrolet</div>
+                    </a>
+                    <a href="">
+                        <div class="sub-item">Toyota</div>
+                    </a>
+                        <div class="sub-item">Kia</div>
+                    <a href="">
+                        <div class="sub-item">Bmw</div>
+                    </a>
+                    <a href="">
+                        <div class="sub-item">Mazda</div>
+                    </a>
+                    <a href="">
+                        <div class="sub-item">Ford</div>
+                    </a>
+                    <a href="">
+                        <div class="sub-item">Hyundai</div>
+                    </a>
+                    <a href="">
+                        <div class="sub-item">Renault</div>
+                    </a>
+                    <a href="">
+                        <div class="sub-item">Nissan</div>
+                    </a>
+                    <a href="">
+                        <div class="sub-item">Mercedes Benz</div>
+                    </a>
+
+                </div>
+            
+                <div class="nav-item" data-sub="sub-compra">
+                    <a href="../views/dashboard.html#compracredi">
+                    Asesoramiento y compra<span class="chevron">&#x203A;</span>
+                    </a>
+                </div>
+            
+                <div class="nav-item" data-sub="sub-servicios">
+                    Servicios <span class="chevron">&#x203A;</span>
+                </div>
+                <div class="sub-items" id="sub-servicios">
+                    <div class="sub-item">Mantenimiento</div>
+                    <div class="sub-item">Garantía</div>
+                </div>
+            
+                <div class="nav-item">
+                    Experiencia <span class="chevron">&#x203A;</span>
+                </div>
+            
+                <div class="nav-item">
+                    Concesionario <span class="chevron">&#x203A;</span>
+                </div>
+        
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section class="vehicle-container">
+
+            <!-- MINIATURAS -->
+            <div class="gallery" id="gallery"></div>
+
+
+
+            </div>
+
+            <!-- IMAGEN PRINCIPAL -->
+            <div class="main-image">
+                <img id="imagenPrincipal" src="" alt="">
+            </div>
+
+            <!-- INFO -->
+            <div class="vehicle-info">
+
+                <div class="card-info">
+
+                    <span class="details" id="detalleVehiculo"></span>
+
+                    <h1 id="nombreVehiculo"></h1>
+
+                    <p class="seller">
+                        Publicado por
+                        <span>P.L.R Automotriz</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                    </p>
+
+                    <h2 class="price" id="precioVehiculo"></h2>
+
+                    <a class="whatsapp-btn" id="btnWhatsapp" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+
+                </div>
+
+                <div class="security-card">
+
+                <h3>Compra segura</h3>
+
+                <div class="security-item">
+
+                    <div class="security-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <div class="security-text">
+                        <strong>Vehículo verificado</strong>
+                        <span>Inspeccionado y validado por expertos.</span>
+                    </div>
+
+                </div>
+
+                <div class="security-item">
+
+                    <div class="security-icon">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                    </div>
+
+                    <div class="security-text">
+                        <strong>Documentación al día</strong>
+                        <span>Listo para traspaso inmediato.</span>
+                    </div>
+
+                </div>
+
+                <div class="security-item">
+
+                    <div class="security-icon">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+
+                    <div class="security-text">
+                        <strong>Garantía de confianza</strong>
+                        <span>Compra respaldada por P.L.R Automotriz.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+
+            
+            
+
+        </section>
+
+        <!-- CARACTERÍSTICAS -->
+        <section class="product-details">
+
+            <h2>Características del producto</h2>
+
+            <div class="features-grid" id="featuresGrid">
+
+                
+
+            </div>
+
+
+            <hr>
+
+            <!-- DESCRIPCIÓN -->
+            <div class="description" >
+
+                <h2>Descripción</h2>
+
+                <p id="descripcionVehiculo"></p>
+
+            </div>
+
+        </section>
+    </main>
+   
+<script src="../js/detalle-auto.js"></script>
+</body>
+</html>

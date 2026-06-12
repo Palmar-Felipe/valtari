@@ -1,0 +1,620 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background:#f5f5f5;
+  padding:25px;
+}
+
+/* menu hamburguesa */
+
+
+
+.topbar {
+  position: relative;
+  height: 10vh; /*  ocupa toda la pantalla */
+  overflow: hidden;
+}
+
+
+
+
+/* ── BOTÓN HAMBURGUESA ── */
+.hbtn{
+  position: fixed;
+  top: 20px;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 10px 16px;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50px;
+
+  background: rgba(16, 3, 90, 0.993);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 8px 24px rgb(10, 25, 228),
+    inset 0 1px 0 rgba(26, 7, 133, 0.08);
+
+  transition: all .3s ease;
+}
+
+
+
+
+
+.hbtn span{
+  width: 20px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #d8d8d8
+  );
+
+  border-radius: 50px;
+}
+
+.hbtn:hover{
+  background: rgba(30,30,30,0.9);
+
+  transform:
+    translate(-50%, -50%)
+    translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.35),
+    inset 0 1px 0 rgba(255,255,255,.12);
+}
+
+
+.hbtn {
+  transition: all 0.3s ease;
+}
+
+/* cuando haces scroll */
+.hbtn.scroll-active {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(6px);
+}
+
+/* cambiar color de líneas */
+.hbtn.scroll-active span {
+  background: #ffffff;
+}
+
+/* cambiar texto */
+.hbtn.scroll-active .menu-text {
+  color: #ffffff;
+}
+
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.menu-text {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+
+/* Animación a X cuando el menú está abierto */
+body.menu-open .hbtn span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+body.menu-open .hbtn span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+body.menu-open .hbtn span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── OVERLAY (fondo oscuro) ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 100;
+}
+
+body.menu-open .overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── PANEL LATERAL ── */
+.panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  background: #fff;
+  border-right: 1px solid #e0e0e0;
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  z-index: 200;
+}
+
+body.menu-open .panel {
+  transform: translateX(0);
+}
+
+/* Cabecera del panel */
+.panel-top {
+  padding: 0 1.25rem;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.panel-logo {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 0.05em;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #111;
+  font-size: 20px;
+  line-height: 1;
+  transition: background 0.15s;
+}
+
+.close-btn:hover {
+  background: #f0f0f0;
+}
+
+/* ── ITEMS DE NAVEGACIÓN ── */
+.nav-items {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background 0.15s;
+  user-select: none;
+}
+
+.nav-item:last-child {
+  border-bottom: none;
+}
+
+.nav-item:hover {
+  background: #f5f5f5;
+}
+
+.chevron {
+  font-size: 18px;
+  color: #999;
+  transition: transform 0.25s ease;
+}
+
+/* ── SUBMENÚ ── */
+.sub-items {
+  display: none;
+  background: #f9f9f9;
+}
+
+.sub-items.open {
+  display: block;
+}
+
+.sub-item {
+  padding: 0.75rem 1.25rem 0.75rem 2.25rem;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+  border-bottom: 1px solid #ebebeb;
+  transition: background 0.15s, color 0.15s;
+}
+
+.sub-item:last-child {
+  border-bottom: none;
+}
+
+.sub-item:hover {
+  background: #efefef;
+  color: #111;
+}
+
+
+
+.sub-items a{
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+
+.nav-item a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* CONTENEDOR */
+
+.vehicle-container{
+  display:grid;
+  grid-template-columns: 90px 1fr 380px;
+  gap:30px;
+
+  align-items:flex-start;
+}
+
+/* GALERÍA */
+
+.gallery{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.thumb{
+  width:58px;
+  height:58px;
+
+  object-fit:cover;
+
+  border-radius:8px;
+  cursor:pointer;
+
+  border:2px solid transparent;
+
+  transition:0.3s ease;
+}
+
+.thumb:hover{
+  transform:scale(1.05);
+}
+
+.thumb.active{
+  border:2px solid #2d6cdf;
+}
+
+/* IMAGEN PRINCIPAL */
+
+.main-image{
+  width:100%;
+  height:680px;
+
+  border-radius:10px;
+  overflow:hidden;
+
+  background:white;
+}
+
+.main-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:contain;
+}
+
+/* INFO */
+
+.vehicle-info{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.card-info,
+.reference-card{
+  background:white;
+
+  border-radius:12px;
+
+  padding:25px;
+
+  border:1px solid #e2e2e2;
+}
+
+/* TEXTOS */
+
+.details{
+  color:#777;
+  font-size:14px;
+}
+
+.card-info h1{
+  margin-top:15px;
+  font-size:38px;
+  color:#222;
+}
+
+.seller{
+  margin-top:10px;
+  color:#777;
+}
+
+.seller span{
+  color:#2d6cdf;
+  font-weight:600;
+}
+
+.seller i{
+  color:#2d6cdf;
+}
+
+.price{
+  margin-top:25px;
+  font-size:50px;
+  color:#111;
+}
+
+/* BOTÓN */
+
+.whatsapp-btn{
+  width:100%;
+  margin-top:300px;
+
+  border:none;
+
+  background:#2d6cdf;
+  color:white;
+
+  padding:18px;
+
+  border-radius:10px;
+
+  font-size:20px;
+  font-weight:600;
+  
+  cursor:pointer;
+ display: flex;
+ justify-content: center;
+  transition:0.3s ease;
+}
+
+.whatsapp-btn:hover{
+  background:#1e57bb;
+}
+
+/* REFERENCIA */
+
+.reference-card h3{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.reference-card p{
+  color:#666;
+  margin-bottom:30px;
+}
+
+.reference-price{
+  width:max-content;
+
+  background:#2d6cdf;
+  color:white;
+
+  padding:12px 20px;
+
+  border-radius:8px;
+
+  font-weight:bold;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+  .vehicle-container{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    flex-direction:row;
+    order:2;
+  }
+
+  .vehicle-info{
+    order:3;
+  }
+
+  .main-image{
+    height:500px;
+  }
+
+}
+
+
+.product-details{
+  background: #fff;
+  margin-top: 40px;
+  padding: 40px;
+  border-radius: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.product-details h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.features-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 60px;
+}
+
+.feature-item{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-circle{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.feature-item p{
+  font-size: 18px;
+  color: #333;
+}
+
+.see-more{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 35px;
+  text-decoration: none;
+  color: #3483fa;
+  font-size: 17px;
+}
+
+.product-details hr{
+  margin: 50px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.description p{
+  font-size: 20px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 1000px;
+}
+
+/* CARD SEGURIDAD / CONFIANZA */
+
+.security-card{
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 24px;
+  margin-top: 20px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.security-card h3{
+  font-size: 24px;
+  color: #222;
+  font-weight: 700;
+}
+
+.security-item{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.security-icon{
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+  background: #f3f7ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2d6cdf;
+  font-size: 18px;
+
+  flex-shrink: 0;
+}
+
+.security-text{
+  display: flex;
+  flex-direction: column;
+}
+
+.security-text strong{
+  font-size: 16px;
+  color: #222;
+}
+
+.security-text span{
+  font-size: 14px;
+  color: #666;
+  margin-top: 3px;
+}
+
+/* EFECTO HOVER */
+
+.security-card:hover{
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .security-card{
+    padding: 20px;
+  }
+
+  .security-card h3{
+    font-size: 20px;
+  }
+
+}

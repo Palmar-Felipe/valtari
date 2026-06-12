@@ -1,0 +1,149 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/viewChevrolet.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="topbar">
+
+        <button class="hbtn" id="hbtn" aria-label="Abrir menú">
+            <section class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </section>
+
+            <p class="menu-text">Menú</p>
+        </button>
+    
+       <img id="heroImagen" src="" alt="">
+        <div class="hero-content">
+
+        <span class="hero-tag" id="heroTag"></span>
+
+        <h1 id="heroTitulo"></h1>
+
+            <p>
+                Vehículos nuevos y usados certificados con garantía,
+                financiamiento y entrega inmediata.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#catalogo" class="btn-primary">
+                    Ver vehículos
+                </a>
+
+                <a href="#" class="btn-secondary">
+                    Agendar asesoría
+                </a>
+
+            </div>
+
+        </div>
+        
+         <!-- OVERLAY -->
+        <div class="overlay" id="overlay"></div>
+        <nav class="panel" id="panel" aria-label="Menú principal">
+            <div class="panel-top">
+            <button class="close-btn" id="close-btn" aria-label="Cerrar menú">&#x2715;</button>
+            </div>
+        
+            <div class="nav-items">
+        
+            <div class="nav-item" data-sub="sub-modelos">
+                Aliados Automotrices <span class="chevron">&#x203A;</span>
+            </div>
+            <div class="sub-items" id="sub-modelos">
+                <a href="">
+                    <div class="sub-item">Chevrolet</div>
+                </a>
+                <a href="">
+                    <div class="sub-item">Toyota</div>
+                </a>
+                    <div class="sub-item">Kia</div>
+                <a href="">
+                    <div class="sub-item">Bmw</div>
+                </a>
+                <a href="">
+                    <div class="sub-item">Mazda</div>
+                </a>
+                <a href="">
+                    <div class="sub-item">Ford</div>
+                </a>
+                <a href="">
+                    <div class="sub-item">Hyundai</div>
+                </a>
+                <a href="">
+                    <div class="sub-item">Renault</div>
+                </a>
+                <a href="">
+                    <div class="sub-item">Nissan</div>
+                </a>
+                <a href="">
+                    <div class="sub-item">Mercedes Benz</div>
+                </a>
+
+            </div>
+        
+            <div class="nav-item" data-sub="sub-compra">
+                <a href="../views/dashboard.html#compracredi">
+                Asesoramiento y compra<span class="chevron">&#x203A;</span>
+                </a>
+            </div>
+        
+            <div class="nav-item" data-sub="sub-servicios">
+                Servicios <span class="chevron">&#x203A;</span>
+            </div>
+            <div class="sub-items" id="sub-servicios">
+                <div class="sub-item">Mantenimiento</div>
+                <div class="sub-item">Garantía</div>
+            </div>
+        
+            <div class="nav-item">
+                Experiencia <span class="chevron">&#x203A;</span>
+            </div>
+        
+            <div class="nav-item">
+                Concesionario <span class="chevron">&#x203A;</span>
+            </div>
+        
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="cars-grid" id="catalogo">
+
+            
+
+        </section>
+
+        <div class="pagination">
+
+            <button class="arrow" id="btnAnterior">
+                &#10094;
+            </button>
+
+            <span id="numeroPagina">1</span>
+
+            <button class="arrow" id="btnSiguiente">
+                &#10095;
+            </button>
+
+        </div>
+        
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="../js/viewChevrolet.js"></script>
+</body>
+</html>

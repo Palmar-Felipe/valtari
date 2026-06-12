@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/dashboard.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Document</title>
 </head>
 <body>
@@ -18,10 +19,11 @@
 
       <p class="menu-text">Menú</p>
     </button>
-    <h2 class="titulo">P.L.R Automotriz</h2>
+    <h1 class="titulo">P.L.R Automotriz</h1>
     <video autoplay muted loop>
-      <source src="../video/Quitar_Lluvia_Genera_Video (1).mp4" type="video/mp4">
+      <source src="../video/dashboard.mp4" type="video/mp4">
     </video>
+    <h2 class="page-content">Más que Conducir Es Distinción</h2>
   </header>
  
   <!-- OVERLAY -->
@@ -30,31 +32,50 @@
   <!-- PANEL LATERAL -->
   <nav class="panel" id="panel" aria-label="Menú principal">
     <div class="panel-top">
-      <span class="panel-logo">MiMarca</span>
       <button class="close-btn" id="close-btn" aria-label="Cerrar menú">&#x2715;</button>
     </div>
  
     <div class="nav-items">
  
       <div class="nav-item" data-sub="sub-modelos">
-        Modelos <span class="chevron">&#x203A;</span>
+        Aliados Automotrices <span class="chevron">&#x203A;</span>
       </div>
       <div class="sub-items" id="sub-modelos">
-        <div class="sub-item">718</div>
-        <div class="sub-item">911</div>
-        <div class="sub-item">Taycan</div>
-        <div class="sub-item">Cayenne</div>
-        <div class="sub-item">Macan</div>
-        <div class="sub-item">Panamera</div>
+        <a href="../views/viewChevrolet.html?marca=Chevrolet">
+          <div class="sub-item">Chevrolet</div>
+        </a>
+        <a href="../views/viewChevrolet.html?marca=Toyota">
+          <div class="sub-item">Toyota</div>
+        </a>
+        <div class="sub-item">Kia</div>
+        <a href="../views/viewChevrolet.html?marca=Bmw">
+          <div class="sub-item">Bmw</div>
+        </a>
+        <a href="../views/viewChevrolet.html?marca=Mazda">
+          <div class="sub-item">Mazda</div>
+        </a>
+        <a href="../views/viewChevrolet.html?marca=Ford">
+          <div class="sub-item">Ford</div>
+        </a>
+        <a href="../views/viewChevrolet.html?marca=Hyundai">
+          <div class="sub-item">Hyundai</div>
+        </a>
+        <a href="../views/viewChevrolet.html?marca=Renault">
+          <div class="sub-item">Renault</div>
+        </a>
+        <a href="../views/viewChevrolet.html?marca=Nissan">
+          <div class="sub-item">Nissan</div>
+        </a>
+        <a href="../views/viewChevrolet.html?marca=Toyota">
+          <div class="sub-item">Mercedes Benz</div>
+        </a>
+
       </div>
  
       <div class="nav-item" data-sub="sub-compra">
-        Asesoramiento y compra <span class="chevron">&#x203A;</span>
-      </div>
-      <div class="sub-items" id="sub-compra">
-        <div class="sub-item">Configurador</div>
-        <div class="sub-item">Financiamiento</div>
-        <div class="sub-item">Seminuevos</div>
+        <a href="#compracredi">
+          Asesoramiento y compra<span class="chevron">&#x203A;</span>
+        </a>
       </div>
  
       <div class="nav-item" data-sub="sub-servicios">
@@ -77,12 +98,168 @@
   </nav>
  
   <!-- CONTENIDO -->
-  <main class="page-content">
-    <h1>Bienvenido</h1>
-    <p>Haz clic en el ícono del menú en la esquina superior izquierda para navegar. El panel se desliza desde la izquierda con un overlay oscuro de fondo. Puedes cerrarlo haciendo clic en la X o en el área oscura.</p>
+  <main>
+
+    <section >
+
+      <div class="carousel">
+        
+        <div class="track">
+
+
+          <img src="../img/carousel_logos/chevrolet.png">
+          <img src="../img/carousel_logos/toyota.png">
+          <img src="../img/carousel_logos/kia.png">
+          <img src="../img/carousel_logos/bmw1.png">
+          <img src="../img/carousel_logos/mazda.png">
+          <img src="../img/carousel_logos/ford.png">
+          <img src="../img/carousel_logos/Hyundai.png">
+          <img src="../img/carousel_logos/Renault.png">
+          <img src="../img/carousel_logos/Nissan.png">
+          <img src="../img/carousel_logos/mercedes.png">
+          <!-- DUPLICA para efecto infinito -->
+          <img src="../img/carousel_logos/chevrolet.png">
+          <img src="../img/carousel_logos/toyota.png">
+          <img src="../img/carousel_logos/kia.png">
+          <img src="../img/carousel_logos/bmw1.png">
+          <img src="../img/carousel_logos/mazda.png">
+          <img src="../img/carousel_logos/ford.png">
+          <img src="../img/carousel_logos/Hyundai.png">
+          <img src="../img/carousel_logos/Renault.png">
+          <img src="../img/carousel_logos/Nissan.png">
+          <img src="../img/carousel_logos/mercedes.png">
+          
+
+        </div>
+      </div>
+    </section>
+    <h2 class="reveal-title ">Nuestra Colección Destacada</h2>
+    <div class="cards-container seccion-color" id="seccionColor">
+      
+
+      <a href="vehiculo.html" class="card reveal">
+        <img src="../img/corolla.webp" alt="Auto">
+        <h3 class="tittlecs reveal">Toyota</h3>
+        <div class="card-info">
+          <span class="tag">Corolla hatchback </span>
+          <p>Preciona Aquí Para Mas Información  ➜</p>
+        </div>
+      </a>
+
+      <a href="vehiculo.html" class="card reveal">
+        <img src="../img/mazda3Sedan.jfif" alt="Auto">
+        <h3 class="tittlecs reveal">Mazda </h3>
+        <div class="card-info">
+          <span class="tag">Mazda3 híbrido </span>
+
+          <p>Preciona Aquí Para Mas Información  ➜</p>
+        </div>
+      </a>
+
+      <a href="vehiculo.html" class="card reveal">
+        <img src="../img/mercedesClaseC200.avif" alt="Auto">
+        <h3 class="tittlecs reveal">Mercedes</h3>
+        <div class="card-info">
+          <span class="tag">Modelo Clase C200 </span>
+          <p>Preciona Aquí Para Mas Información  ➜</p>
+        </div>
+      </a>
+
+      <a href="vehiculo.html" class="card reveal">
+        <img src="../img/ford-bronco.jpg" alt="Auto">
+        <h3 class="tittlecs reveal">Ford</h3>
+        <div class="card-info">
+          <span class="tag">Ford-Bronco</span>
+    
+          <p>Preciona Aquí Para Mas Información  ➜</p>
+        </div>
+      </a>
+
+    </div>
+    <section id="compracredi">
+      <h2 class="reveal-title" >Asesoramiento De Compra</h2>
+      <section class="cards-info">
+        <a href="vehiculo.html" class="sbre reveal">
+          <img src="../img/Servicess/compra.png" alt="Auto">
+          <h3 class="servi reveal">Compra Credito</h3>
+          <div class="card-info">
+
+            <p>Financia tu vehículo con planes flexibles y cuotas a tu medida.  ➜</p>
+          </div>
+        </a>
+        <a href="vehiculo.html" class="sbre reveal">
+          <img src="../img/Servicess/financiacion.png" alt="Auto">
+          <h3 class="servi reveal">Compra Hoy</h3>
+          <div class="card-info">
+            <p>No esperes más, llévatelo hoy  ➜</p>
+          </div>
+        </a>
+      </section>
+    </section>
+    
+    
   </main>
 
-  <footer></footer>
+  <footer class="footer">
+
+    <div class="top-footer">
+      <a href="#">Volver arriba</a>
+    </div>
+
+    <div class="footer-container">
+
+      <!-- Región -->
+      <div class="footer-column">
+        <h4>Región / Atlantico</h4>
+
+        <div class="country">
+          <img src="../img/Pie de pagina/colombia.webp" alt="Colombia">
+          <span>Colombia / Español</span>
+          <a href="#">Cambiar</a>
+        </div>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-column">
+        <h4>Ubicación y contacto</h4>
+
+        <a href="#">Ponte en contacto con nosotros</a>
+      </div>
+
+      
+
+
+      <!-- Porsche web -->
+      <div class="footer-column">
+        <h4>La web</h4>
+
+        <a href="#">Página de P.L.R Automotriz</a>
+
+      </div>
+
+    </div>
+
+    <!-- Redes -->
+    <div class="footer-bottom">
+
+      <div class="socials">
+        
+        <a href="https://facebook.com" target="_blank">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <a href="">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+      </div>
+    </div>
+
+  </footer>
  <script src="../js/dashnoard.js"></script>
 </body>
 </html>
