@@ -9,7 +9,9 @@
   <title>Document</title>
 </head>
 <body>
+  
   <header class="topbar">
+    
     <button class="hbtn" id="hbtn" aria-label="Abrir menú">
       <section class="lines">
         <span></span>
@@ -21,177 +23,198 @@
     </button>
     <h1 class="titulo">P.L.R Automotriz</h1>
     <video autoplay muted loop>
-      <source src="../video/dashboard.mp4" type="video/mp4">
+      <source src="../video/Toyotanuevo.mp4" type="video/mp4">
     </video>
     <h2 class="page-content">Más que Conducir Es Distinción</h2>
+        <!-- OVERLAY -->
+    <div class="overlay" id="overlay"></div>
+  
+    <!-- PANEL LATERAL -->
+    <nav class="panel" id="panel" aria-label="Menú principal">
+      <div class="panel-top">
+        <button class="close-btn" id="close-btn" aria-label="Cerrar menú">&#x2715;</button>
+      </div>
+  
+      <div class="nav-items">
+  
+        <div class="nav-item" data-sub="sub-modelos">
+          Aliados Automotrices <span class="chevron">&#x203A;</span>
+        </div>
+        <div class="sub-items" id="sub-modelos">
+          <a href="../views/viewChevrolet.html?marca=Chevrolet">
+            <div class="sub-item">Chevrolet</div>
+          </a>
+          <a href="../views/viewChevrolet.html?marca=Toyota">
+            <div class="sub-item">Toyota</div>
+          </a>
+          <a href="../views/viewChevrolet.html?marca=Kia">
+            <div class="sub-item">Kia</div>
+          </a>
+          
+          <a href="../views/viewChevrolet.html?marca=Bmw">
+            <div class="sub-item">Bmw</div>
+          </a>
+          <a href="../views/viewChevrolet.html?marca=Mazda">
+            <div class="sub-item">Mazda</div>
+          </a>
+          <a href="../views/viewChevrolet.html?marca=Ford">
+            <div class="sub-item">Ford</div>
+          </a>
+          <a href="../views/viewChevrolet.html?marca=Hyundai">
+            <div class="sub-item">Hyundai</div>
+          </a>
+          <a href="../views/viewChevrolet.html?marca=Renault">
+            <div class="sub-item">Renault</div>
+          </a>
+          <a href="../views/viewChevrolet.html?marca=Nissan">
+            <div class="sub-item">Nissan</div>
+          </a>
+          <a href="../views/viewChevrolet.html?marca=Mercedes">
+            <div class="sub-item">Mercedes Benz</div>
+          </a>
+
+        </div>
+  
+        <div class="nav-item" data-sub="sub-compra">
+          <a href="#compracredi">
+            Asesoramiento y compra<span class="chevron">&#x203A;</span>
+          </a>
+        </div>
+  
+        <div class="nav-item" data-sub="sub-servicios">
+          Servicios <span class="chevron">&#x203A;</span>
+        </div>
+        <div class="sub-items" id="sub-servicios">
+          <div class="sub-item">Mantenimiento</div>
+          <div class="sub-item">Garantía</div>
+        </div>
+  
+        <div class="nav-item">
+          Experiencia <span class="chevron">&#x203A;</span>
+        </div>
+  
+        <div class="nav-item">
+          Concesionario <span class="chevron">&#x203A;</span>
+        </div>
+  
+      </div>
+    </nav>
   </header>
  
-  <!-- OVERLAY -->
-  <div class="overlay" id="overlay"></div>
- 
-  <!-- PANEL LATERAL -->
-  <nav class="panel" id="panel" aria-label="Menú principal">
-    <div class="panel-top">
-      <button class="close-btn" id="close-btn" aria-label="Cerrar menú">&#x2715;</button>
-    </div>
- 
-    <div class="nav-items">
- 
-      <div class="nav-item" data-sub="sub-modelos">
-        Aliados Automotrices <span class="chevron">&#x203A;</span>
-      </div>
-      <div class="sub-items" id="sub-modelos">
-        <a href="../views/viewChevrolet.html?marca=Chevrolet">
-          <div class="sub-item">Chevrolet</div>
-        </a>
-        <a href="../views/viewChevrolet.html?marca=Toyota">
-          <div class="sub-item">Toyota</div>
-        </a>
-        <div class="sub-item">Kia</div>
-        <a href="../views/viewChevrolet.html?marca=Bmw">
-          <div class="sub-item">Bmw</div>
-        </a>
-        <a href="../views/viewChevrolet.html?marca=Mazda">
-          <div class="sub-item">Mazda</div>
-        </a>
-        <a href="../views/viewChevrolet.html?marca=Ford">
-          <div class="sub-item">Ford</div>
-        </a>
-        <a href="../views/viewChevrolet.html?marca=Hyundai">
-          <div class="sub-item">Hyundai</div>
-        </a>
-        <a href="../views/viewChevrolet.html?marca=Renault">
-          <div class="sub-item">Renault</div>
-        </a>
-        <a href="../views/viewChevrolet.html?marca=Nissan">
-          <div class="sub-item">Nissan</div>
-        </a>
-        <a href="../views/viewChevrolet.html?marca=Toyota">
-          <div class="sub-item">Mercedes Benz</div>
-        </a>
 
-      </div>
- 
-      <div class="nav-item" data-sub="sub-compra">
-        <a href="#compracredi">
-          Asesoramiento y compra<span class="chevron">&#x203A;</span>
-        </a>
-      </div>
- 
-      <div class="nav-item" data-sub="sub-servicios">
-        Servicios <span class="chevron">&#x203A;</span>
-      </div>
-      <div class="sub-items" id="sub-servicios">
-        <div class="sub-item">Mantenimiento</div>
-        <div class="sub-item">Garantía</div>
-      </div>
- 
-      <div class="nav-item">
-        Experiencia <span class="chevron">&#x203A;</span>
-      </div>
- 
-      <div class="nav-item">
-        Concesionario <span class="chevron">&#x203A;</span>
-      </div>
- 
-    </div>
-  </nav>
  
   <!-- CONTENIDO -->
   <main>
 
-    <section >
+    <section>
+      <h2 class="reveal-title " id="favoriteCars">Nuestra Colección Destacada</h2>
+      <div class="cards-container seccion-color" id="seccionColor">
+        
+
+        <a href="vehiculo.html" class="card reveal">
+          <img src="../img/corolla.webp" alt="Auto">
+          <h3 class="tittlecs reveal">Toyota</h3>
+          <div class="card-info">
+            <span class="tag">Corolla hatchback </span>
+            <p>Preciona Aquí Para Mas Información  ➜</p>
+          </div>
+        </a>
+
+        <a href="vehiculo.html" class="card reveal">
+          <img src="../img/mazda3Sedan.jfif" alt="Auto">
+          <h3 class="tittlecs reveal">Mazda </h3>
+          <div class="card-info">
+            <span class="tag">Mazda3 híbrido </span>
+
+            <p>Preciona Aquí Para Mas Información  ➜</p>
+          </div>
+        </a>
+
+        <a href="vehiculo.html" class="card reveal">
+          <img src="../img/mercedesClaseC200.avif" alt="Auto">
+          <h3 class="tittlecs reveal">Mercedes</h3>
+          <div class="card-info">
+            <span class="tag">Modelo Clase C200 </span>
+            <p>Preciona Aquí Para Mas Información  ➜</p>
+          </div>
+        </a>
+
+        <a href="vehiculo.html" class="card reveal">
+          <img src="../img/ford-bronco.jpg" alt="Auto">
+          <h3 class="tittlecs reveal">Ford</h3>
+          <div class="card-info">
+            <span class="tag">Ford-Bronco</span>
+      
+            <p>Preciona Aquí Para Mas Información  ➜</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+   
+    <section class="diferent">
 
       <div class="carousel">
-        
+        <h2 class="reveal-title">MARCAS QUE REPRESENTAN NUESTRA VISIÓN</h2>
+        <div class="line-premium"></div>
+        <p>Una selección de fabricantes que comparten nuestro estándar de calidad.</p>
         <div class="track">
 
-
-          <img src="../img/carousel_logos/chevrolet.png">
-          <img src="../img/carousel_logos/toyota.png">
-          <img src="../img/carousel_logos/kia.png">
-          <img src="../img/carousel_logos/bmw1.png">
-          <img src="../img/carousel_logos/mazda.png">
-          <img src="../img/carousel_logos/ford.png">
-          <img src="../img/carousel_logos/Hyundai.png">
-          <img src="../img/carousel_logos/Renault.png">
-          <img src="../img/carousel_logos/Nissan.png">
-          <img src="../img/carousel_logos/mercedes.png">
-          <!-- DUPLICA para efecto infinito -->
-          <img src="../img/carousel_logos/chevrolet.png">
-          <img src="../img/carousel_logos/toyota.png">
-          <img src="../img/carousel_logos/kia.png">
-          <img src="../img/carousel_logos/bmw1.png">
-          <img src="../img/carousel_logos/mazda.png">
-          <img src="../img/carousel_logos/ford.png">
-          <img src="../img/carousel_logos/Hyundai.png">
-          <img src="../img/carousel_logos/Renault.png">
-          <img src="../img/carousel_logos/Nissan.png">
-          <img src="../img/carousel_logos/mercedes.png">
+          <a href="../views/viewChevrolet.html?marca=Chevrolet"><img src="../img/carousel_logos/chevrolet.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Toyota"><img src="../img/carousel_logos/toyota.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Kia"><img src="../img/carousel_logos/kia.png"> </a>
+          <a href="../views/viewChevrolet.html?marca=Bmw"><img src="../img/carousel_logos/bmw1.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Mazda"><img src="../img/carousel_logos/mazda.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Ford"><img src="../img/carousel_logos/ford.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Hyundai"><img src="../img/carousel_logos/Hyundai.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Renault"><img src="../img/carousel_logos/Renault.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Nissan"><img src="../img/carousel_logos/Nissan.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Mercedes"><img src="../img/carousel_logos/mercedes.png"></a>
           
-
+          
+          <!-- DUPLICA para efecto infinito -->
+          <a href="../views/viewChevrolet.html?marca=Chevrolet"><img src="../img/carousel_logos/chevrolet.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Toyota"><img src="../img/carousel_logos/toyota.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Kia"><img src="../img/carousel_logos/kia.png"> </a>
+          <a href="../views/viewChevrolet.html?marca=Bmw"><img src="../img/carousel_logos/bmw1.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Mazda"><img src="../img/carousel_logos/mazda.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Ford"><img src="../img/carousel_logos/ford.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Hyundai"><img src="../img/carousel_logos/Hyundai.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Renault"><img src="../img/carousel_logos/Renault.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Nissan"><img src="../img/carousel_logos/Nissan.png"></a>
+          <a href="../views/viewChevrolet.html?marca=Mercedes"><img src="../img/carousel_logos/mercedes.png"></a>
+          
         </div>
       </div>
     </section>
-    <h2 class="reveal-title ">Nuestra Colección Destacada</h2>
-    <div class="cards-container seccion-color" id="seccionColor">
-      
-
-      <a href="vehiculo.html" class="card reveal">
-        <img src="../img/corolla.webp" alt="Auto">
-        <h3 class="tittlecs reveal">Toyota</h3>
-        <div class="card-info">
-          <span class="tag">Corolla hatchback </span>
-          <p>Preciona Aquí Para Mas Información  ➜</p>
-        </div>
-      </a>
-
-      <a href="vehiculo.html" class="card reveal">
-        <img src="../img/mazda3Sedan.jfif" alt="Auto">
-        <h3 class="tittlecs reveal">Mazda </h3>
-        <div class="card-info">
-          <span class="tag">Mazda3 híbrido </span>
-
-          <p>Preciona Aquí Para Mas Información  ➜</p>
-        </div>
-      </a>
-
-      <a href="vehiculo.html" class="card reveal">
-        <img src="../img/mercedesClaseC200.avif" alt="Auto">
-        <h3 class="tittlecs reveal">Mercedes</h3>
-        <div class="card-info">
-          <span class="tag">Modelo Clase C200 </span>
-          <p>Preciona Aquí Para Mas Información  ➜</p>
-        </div>
-      </a>
-
-      <a href="vehiculo.html" class="card reveal">
-        <img src="../img/ford-bronco.jpg" alt="Auto">
-        <h3 class="tittlecs reveal">Ford</h3>
-        <div class="card-info">
-          <span class="tag">Ford-Bronco</span>
-    
-          <p>Preciona Aquí Para Mas Información  ➜</p>
-        </div>
-      </a>
-
-    </div>
-    <section id="compracredi">
-      <h2 class="reveal-title" >Asesoramiento De Compra</h2>
+    <section>
+      <h2 class="reveal-title" >Tu Confianza, Nuestro Compromiso</h2>
       <section class="cards-info">
-        <a href="vehiculo.html" class="sbre reveal">
-          <img src="../img/Servicess/compra.png" alt="Auto">
+        <a href="/frontend/src/views/about us.html" class="nosotros reveal">
+          <img src="../img/Servicess/nosotros.png" alt="Auto">
+          <div class="card-info">
+
+            <p>Conoce un poco mas sobre P.L.R Automotriz.  ➜</p>
+          </div>
+        </a>
+      </section>
+    <section id="compracredi" class="servicis">
+      <h2 class="reveal-title" >Asesoramiento Y Compra</h2>
+      <section class="cards-info">
+        <a href="../views/servicis/finan.html" class="sbre reveal">
+          <img src="../img/Servicess/finan.png" alt="Auto">
           <h3 class="servi reveal">Compra Credito</h3>
           <div class="card-info">
 
             <p>Financia tu vehículo con planes flexibles y cuotas a tu medida.  ➜</p>
           </div>
         </a>
-        <a href="vehiculo.html" class="sbre reveal">
+        <a href="../views/servicis/com.html" class="sbre reveal">
           <img src="../img/Servicess/financiacion.png" alt="Auto">
           <h3 class="servi reveal">Compra Hoy</h3>
           <div class="card-info">
-            <p>No esperes más, llévatelo hoy  ➜</p>
+            <p>No esperes más,
+              contactanos ➜</p>
           </div>
         </a>
       </section>

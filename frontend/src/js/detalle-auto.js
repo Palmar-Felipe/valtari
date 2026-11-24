@@ -92,7 +92,7 @@ async function cargarVehiculo() {
 
         
 
-        document.getElementById("btnWhatsapp").href = urlWhatsapp;
+        
 
         document.getElementById("descripcionVehiculo").textContent =
             vehiculo.descripcion;
@@ -169,9 +169,11 @@ async function cargarImagenes() {
 
         });
 
-        if(imagenes.length > 0){
+        if (imagenes.length > 0) {
 
             imagenPrincipal.src = `../img/${imagenes[0].imagen}`;
+
+            crearLinkWhatsapp(imagenes[0].imagen);
 
         }
 
@@ -204,6 +206,34 @@ function activarGaleria() {
         });
 
     });
+
+}
+
+function crearLinkWhatsapp(nombreImagen){
+
+    if(!vehiculoActual) return;
+
+    // Por ahora usamos localhost.
+    // Luego cambiaremos esto por tu dominio.
+    const urlImagen = new URL(
+        `../img/${nombreImagen}`,
+        window.location.href
+    ).href;
+
+    const mensaje = `Hola, estoy interesado en este vehículo.
+
+🚗 ${vehiculoActual.nombre}
+📅 Año: ${vehiculoActual.anio}
+📍 Ciudad: ${vehiculoActual.ciudad}
+💰 Precio: $${Number(vehiculoActual.precio).toLocaleString("es-CO")}
+
+📸 Foto:
+${urlImagen}
+
+¿Sigue disponible?`;
+
+    document.getElementById("btnWhatsapp").href =
+        `https://wa.me/${vehiculoActual.whatsapp}?text=${encodeURIComponent(mensaje)}`;
 
 }
 

@@ -1,0 +1,1040 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo span {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 7px;
+}
+
+.logo small {
+    font-size: 8px;
+    letter-spacing: 5px;
+    margin-top: 7px;
+    opacity: .7;
+}
+
+
+/* BOTÓN MENÚ */
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    background: transparent;
+    border: none;
+
+    color: #fff;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.menu-btn i {
+    font-size: 20px;
+}
+
+
+
+/* =========================================
+   MENÚ LATERAL
+========================================= */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .75);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .4s;
+
+    z-index: 150;
+}
+
+.side-menu {
+    position: fixed;
+
+    top: 0;
+    right: -420px;
+
+    width: 420px;
+    max-width: 90%;
+
+    height: 100vh;
+
+    background: #080808;
+
+    z-index: 200;
+
+    padding: 45px;
+
+    transition: .5s ease;
+
+    overflow-y: auto;
+}
+
+.menu-open .side-menu {
+    right: 0;
+}
+
+.menu-open .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.close-btn {
+    position: absolute;
+
+    top: 30px;
+    right: 35px;
+
+    background: transparent;
+    border: none;
+
+    color: #fff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+.menu-content {
+    margin-top: 80px;
+}
+
+.menu-label {
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 40px;
+}
+
+
+.nav-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #222;
+
+    font-size: 17px;
+
+    transition: .3s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: #aaa;
+}
+
+.menu-expand {
+    cursor: pointer;
+}
+
+
+.sub-items {
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition: .4s ease;
+
+    padding-left: 15px;
+}
+
+.sub-items.open {
+    max-height: 500px;
+}
+
+.sub-items a {
+    display: block;
+
+    padding: 12px 0;
+
+    color: #888;
+
+    font-size: 14px;
+
+    transition: .3s;
+}
+
+.sub-items a:hover {
+    color: #fff;
+}
+
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.about-hero {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 8%;
+
+    background-image:
+        url("../img/sail-2018.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+}
+
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.9) 0%,
+            rgba(0,0,0,.65) 45%,
+            rgba(0,0,0,.25) 100%
+        );
+}
+
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 750px;
+
+    animation: heroAppear 1.2s ease forwards;
+}
+
+
+.hero-label {
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #aaa;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-content h1 {
+    font-size: clamp(45px, 6vw, 85px);
+
+    line-height: 1.05;
+
+    font-weight: 300;
+
+    letter-spacing: -3px;
+}
+
+
+.hero-content h1 span {
+    font-weight: 600;
+}
+
+
+.hero-description {
+    max-width: 580px;
+
+    margin-top: 30px;
+
+    color: #bbb;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 45px;
+
+    padding: 16px 25px;
+
+    border: 1px solid #555;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    transition: .4s;
+}
+
+
+.hero-button:hover {
+    background: #fff;
+    color: #000;
+
+    border-color: #fff;
+}
+
+.hero-button i {
+    font-size: 12px;
+}
+
+
+@keyframes heroAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro-section {
+    min-height: 800px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: #fff;
+
+    color: #111;
+}
+
+
+.intro-image {
+    overflow: hidden;
+}
+
+
+.intro-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 1s ease;
+}
+
+
+.intro-image:hover img {
+    transform: scale(1.04);
+}
+
+
+.intro-content {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 10%;
+
+    max-width: 700px;
+}
+
+
+.section-label {
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #777;
+
+    margin-bottom: 25px;
+}
+
+
+.intro-content h2 {
+    font-size: clamp(38px, 4vw, 60px);
+
+    font-weight: 300;
+
+    line-height: 1.1;
+
+    margin-bottom: 35px;
+}
+
+
+.intro-content h2 span {
+    font-weight: 600;
+}
+
+
+.intro-content p:not(.section-label) {
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #555;
+
+    margin-bottom: 20px;
+}
+
+
+
+/* =========================================
+   FILOSOFÍA
+========================================= */
+
+.history-section {
+    background: #080808;
+
+    padding: 140px 8%;
+}
+
+
+.section-heading {
+    max-width: 700px;
+
+    margin: 0 auto 80px;
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+    font-size: clamp(38px, 5vw, 65px);
+
+    font-weight: 300;
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+
+.section-heading h2 span {
+    font-weight: 600;
+}
+
+
+.section-heading > p:last-child {
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+.philosophy-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 1px;
+
+    background: #292929;
+}
+
+
+.philosophy-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 40px 30px;
+
+    background: #080808;
+
+    transition: .4s;
+
+    overflow: hidden;
+}
+
+
+.philosophy-card:hover {
+    background: #111;
+}
+
+
+.card-number {
+    color: #555;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 60px;
+}
+
+
+.philosophy-card i {
+    font-size: 25px;
+
+    margin-bottom: 30px;
+
+    color: #ddd;
+}
+
+
+.philosophy-card h3 {
+    font-size: 19px;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+
+.philosophy-card p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =========================================
+   FRASE
+========================================= */
+
+.quote-section {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-image:
+        url("../img/sail-2018.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.quote-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0,0,0,.7);
+}
+
+
+.quote-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    padding: 40px;
+}
+
+
+.quote-content i {
+    font-size: 30px;
+
+    color: #777;
+
+    margin-bottom: 35px;
+}
+
+
+.quote-content h2 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    font-weight: 300;
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+
+.quote-content p {
+    margin-top: 30px;
+
+    color: #aaa;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =========================================
+   WHY
+========================================= */
+
+.why-section {
+    background: #fff;
+
+    color: #111;
+
+    padding: 140px 8%;
+}
+
+
+.why-section .section-heading {
+    text-align: left;
+
+    margin-left: 0;
+}
+
+
+.why-section .section-label {
+    color: #777;
+}
+
+
+.why-grid {
+    max-width: 1100px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.why-item {
+    display: flex;
+
+    gap: 30px;
+
+    padding: 35px 20px;
+
+    border-bottom: 1px solid #ddd;
+
+    transition: .3s;
+}
+
+
+.why-item:hover {
+    padding-left: 30px;
+}
+
+
+.why-item > span {
+    color: #999;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+
+.why-item h3 {
+    font-size: 17px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+
+.why-item p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+
+/* =========================================
+   CTA FINAL
+========================================= */
+
+.final-cta {
+    position: relative;
+
+    min-height: 600px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-image:
+        url("../img/sail-2018.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.cta-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.65),
+            rgba(0,0,0,.85)
+        );
+}
+
+
+.cta-content {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.cta-content > p {
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    color: #aaa;
+
+    margin-bottom: 25px;
+}
+
+
+.cta-content h2 {
+    font-size: clamp(40px, 6vw, 75px);
+
+    font-weight: 300;
+
+    line-height: 1.05;
+}
+
+
+.cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 45px;
+
+    padding: 18px 30px;
+
+    background: #fff;
+
+    color: #000;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    transition: .4s;
+}
+
+
+.cta-button:hover {
+    background: #ccc;
+
+    transform: translateY(-3px);
+}
+
+
+.cta-button i {
+    font-size: 12px;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #050505;
+
+    text-align: center;
+
+    padding: 70px 20px 40px;
+}
+
+
+.footer-logo {
+    font-size: 28px;
+
+    letter-spacing: 7px;
+
+    font-weight: 600;
+}
+
+
+.footer-logo span {
+    display: block;
+
+    font-size: 8px;
+
+    letter-spacing: 5px;
+
+    color: #777;
+
+    margin-top: 8px;
+}
+
+
+.footer > p {
+    margin-top: 25px;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+
+.footer-line {
+    width: 80px;
+
+    height: 1px;
+
+    background: #333;
+
+    margin: 40px auto;
+}
+
+
+.footer small {
+    color: #444;
+
+    font-size: 10px;
+}
+
+
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .philosophy-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .intro-section {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-image {
+        height: 550px;
+    }
+
+}
+
+
+
+/* =========================================
+   RESPONSIVE MÓVIL
+========================================= */
+
+@media (max-width: 650px) {
+
+    .header {
+        height: 75px;
+
+        padding: 0 25px;
+    }
+
+
+    .logo span {
+        font-size: 20px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .menu-btn span {
+        display: none;
+    }
+
+
+    .side-menu {
+        padding: 30px;
+    }
+
+
+    .about-hero {
+        min-height: 100svh;
+
+        padding: 100px 25px 70px;
+
+        background-position: 65% center;
+    }
+
+
+    .hero-content h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+
+    .intro-section {
+        display: block;
+    }
+
+
+    .intro-image {
+        height: 400px;
+    }
+
+
+    .intro-content {
+        padding: 80px 25px;
+    }
+
+
+    .intro-content h2 {
+        font-size: 42px;
+    }
+
+
+    .history-section {
+        padding: 90px 25px;
+    }
+
+
+    .section-heading {
+        margin-bottom: 55px;
+    }
+
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .philosophy-card {
+        min-height: 280px;
+    }
+
+
+    .quote-section {
+        min-height: 500px;
+    }
+
+
+    .quote-content {
+        padding: 25px;
+    }
+
+
+    .why-section {
+        padding: 90px 25px;
+    }
+
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .final-cta {
+        min-height: 500px;
+    }
+
+}

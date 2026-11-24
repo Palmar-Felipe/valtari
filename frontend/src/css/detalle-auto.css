@@ -408,7 +408,7 @@ body.menu-open .panel {
 
   font-size:20px;
   font-weight:600;
-  
+  text-decoration: none;
   cursor:pointer;
  display: flex;
  justify-content: center;

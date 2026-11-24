@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sobre Nosotros | P.L.R Automotriz</title>
+
+    <link rel="stylesheet" href="../css/servicis/about.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- =========================================
+         MENÚ
+    ========================================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span>P.L.R</span>
+            <small>AUTOMOTRIZ</small>
+        </div>
+
+        <button class="menu-btn" id="hbtn">
+            <span>Menú</span>
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </header>
+
+
+    <!-- =========================================
+         OVERLAY
+    ========================================== -->
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <!-- =========================================
+         MENÚ LATERAL
+    ========================================== -->
+
+    <nav class="side-menu" id="side-menu">
+
+        <button class="close-btn" id="close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <div class="menu-content">
+
+            <p class="menu-label">P.L.R AUTOMOTRIZ</p>
+
+            <a href="../views/dashboard.html" class="nav-item">
+                Inicio
+            </a>
+
+            <div class="nav-item menu-expand" data-sub="modelosSub">
+                <span>Modelos</span>
+                <i class="fa-solid fa-chevron-right chevron"></i>
+            </div>
+
+            <div class="sub-items" id="modelosSub">
+
+                <a href="viewChevrolet.html?marca=Chevrolet">
+                    Chevrolet
+                </a>
+                <a href="viewChevrolet.html?marca=Toyota">
+                    Toyota
+                </a>
+                <a href="viewChevrolet.html?marca=Kia">
+                    Kia
+                </a>
+                <a href="viewChevrolet.html?marca=BMW">
+                    BMW
+                </a>
+                <a href="viewChevrolet.html?marca=Mazda">
+                    Mazda
+                </a>
+                <a href="viewChevrolet.html?marca=Ford">
+                    Ford
+                </a>
+                <a href="viewChevrolet.html?marca=Hyundai">
+                    Hyundai
+                </a>
+                <a href="viewChevrolet.html?marca=Renault">
+                    Renault
+                </a>
+                <a href="viewChevrolet.html?marca=Nissan">
+                    Nissan
+                </a>
+                <a href="viewChevrolet.html?marca=Mercedes">
+                    Mercedes-Benz
+                </a>
+
+            </div>
+
+
+
+            <a href="about us.html" class="nav-item active">
+                Sobre nosotros
+            </a>
+            <a href="./servicis/finan.html" class="nav-item">
+                Compra a Credito
+            </a>
+            <a href="./servicis/com.html" class="nav-item">
+                Pago de contado
+            </a>
+            <a href="contacto.html" class="nav-item">
+                Contacto
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="about-hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                P.L.R AUTOMOTRIZ
+            </p>
+
+            <h1>
+                Más que conducir.
+                <br>
+                <span>Es distinción.</span>
+            </h1>
+
+            <p class="hero-description">
+                Una nueva forma de encontrar vehículos excepcionales,
+                donde cada detalle está pensado para quienes buscan
+                mucho más que un automóvil.
+            </p>
+
+            <a href="#historia" class="hero-button">
+                CONÓCENOS
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRODUCCIÓN
+    ========================================== -->
+
+    <section class="intro-section">
+
+        <div class="intro-image">
+
+            <img
+                src="../img/Servicess/Sports_sedan.jpeg"
+                alt="Vehículo P.L.R Automotriz"
+            >
+
+        </div>
+
+
+        <div class="intro-content">
+
+            <p class="section-label">
+                NUESTRA ESENCIA
+            </p>
+
+            <h2>
+                No vendemos
+                <span>automóviles.</span>
+            </h2>
+
+            <p>
+                En P.L.R Automotriz creemos que elegir un vehículo
+                debe ser una experiencia diferente.
+            </p>
+
+            <p>
+                Por eso seleccionamos cuidadosamente cada automóvil
+                que hace parte de nuestra colección, buscando ofrecer
+                vehículos que representen calidad, diseño, confianza
+                y personalidad.
+            </p>
+
+            <p>
+                Nuestro objetivo es acompañarte desde el primer
+                momento hasta que encuentres el vehículo que
+                realmente encaje contigo.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         HISTORIA
+    ========================================== -->
+
+    <section class="history-section" id="historia">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                NUESTRA FILOSOFÍA
+            </p>
+
+            <h2>
+                Una experiencia
+                <span>diferente.</span>
+            </h2>
+
+            <p>
+                Cada vehículo representa una elección.
+                Nosotros nos encargamos de hacer que sea
+                la elección correcta.
+            </p>
+
+        </div>
+
+
+        <div class="philosophy-grid">
+
+            <!-- CARD 01 -->
+
+            <article class="philosophy-card">
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <i class="fa-solid fa-car"></i>
+
+                <h3>
+                    Seleccionamos
+                </h3>
+
+                <p>
+                    Buscamos vehículos que destaquen por su
+                    diseño, estado y características.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 02 -->
+
+            <article class="philosophy-card">
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h3>
+                    Verificamos
+                </h3>
+
+                <p>
+                    Cada vehículo debe cumplir nuestros
+                    criterios antes de formar parte de la colección.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 03 -->
+
+            <article class="philosophy-card">
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <i class="fa-solid fa-handshake"></i>
+
+                <h3>
+                    Asesoramos
+                </h3>
+
+                <p>
+                    Te acompañamos para que puedas tomar
+                    una decisión con seguridad y confianza.
+                </p>
+
+            </article>
+
+
+            <!-- CARD 04 -->
+
+            <article class="philosophy-card">
+
+                <div class="card-number">
+                    04
+                </div>
+
+                <i class="fa-solid fa-key"></i>
+
+                <h3>
+                    Entregamos
+                </h3>
+
+                <p>
+                    Porque el momento de recibir tu vehículo
+                    debe convertirse en una experiencia memorable.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FRASE PREMIUM
+    ========================================== -->
+
+    <section class="quote-section">
+
+        <div class="quote-overlay"></div>
+
+        <div class="quote-content">
+
+            <i class="fa-solid fa-quote-left"></i>
+
+            <h2>
+                Tu próximo capítulo
+                <br>
+                comienza aquí.
+            </h2>
+
+            <p>
+                El vehículo correcto no solamente te lleva
+                a un lugar. También forma parte de tu historia.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         POR QUÉ P.L.R
+    ========================================== -->
+
+    <section class="why-section">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                POR QUÉ P.L.R
+            </p>
+
+            <h2>
+                Diseñado para
+                <span>elegir mejor.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+            <div class="why-item">
+
+                <span>01</span>
+
+                <div>
+                    <h3>
+                        Selección
+                    </h3>
+
+                    <p>
+                        Una colección cuidadosamente elegida.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <span>02</span>
+
+                <div>
+                    <h3>
+                        Transparencia
+                    </h3>
+
+                    <p>
+                        Información clara antes de tomar una decisión.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <span>03</span>
+
+                <div>
+                    <h3>
+                        Asesoramiento
+                    </h3>
+
+                    <p>
+                        Atención enfocada en tus necesidades.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="why-item">
+
+                <span>04</span>
+
+                <div>
+                    <h3>
+                        Experiencia
+                    </h3>
+
+                    <p>
+                        Una experiencia de compra diferente.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA FINAL
+    ========================================== -->
+
+    <section class="final-cta">
+
+        <div class="cta-overlay"></div>
+
+        <div class="cta-content">
+
+            <p>
+                P.L.R AUTOMOTRIZ
+            </p>
+
+            <h2>
+                Encuentra el vehículo
+                <br>
+                que habla de ti.
+            </h2>
+
+            <a href="viewChevrolet.html" class="cta-button">
+                VER COLECCIÓN
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            P.L.R
+            <span>AUTOMOTRIZ</span>
+        </div>
+
+        <p>
+            Más que conducir. Es distinción.
+        </p>
+
+        <div class="footer-line"></div>
+
+        <small>
+            © 2026 P.L.R Automotriz. Todos los derechos reservados.
+        </small>
+
+    </footer>
+
+
+    <script src="../js/about.js"></script>
+
+</body>
+</html>

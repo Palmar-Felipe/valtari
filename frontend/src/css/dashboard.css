@@ -30,7 +30,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   letter-spacing: 2px; /* efecto premium */
-  top: 10px;
+  top: 30px;
 }
 
 
@@ -62,10 +62,10 @@ body {
   padding: 6px;
   border-radius: 4px;
   position: absolute;
-  left: 50px;
+  left: 80px;
   transform: translate(-50%, -50%);
   align-items: center;
-  top: 20px;
+  top: 50px;
 
 }
 
@@ -73,8 +73,8 @@ body {
 
 .hbtn span {
   display: block;
-  width: 22px;
-  height: 2px;
+  width: 20px;
+  height: 1px;
   background: #ffffff;
   border-radius: 2px;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -87,7 +87,7 @@ body {
   gap: 5px;
 }
 .menu-text {
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
   font-weight: 500;
 }
@@ -428,23 +428,72 @@ main {
   transform: translateY(0);
 }
 
+.diferent{
+  margin-top: 15%;
+}
+
 .carousel {
   overflow: hidden;
   background: black;
+  padding: 1px 0 100px;
   
-  padding: 60px 0;
+}
+
+.carousel h2 {
+  color: #ffffff;
+  text-align: center;
+
+  
+}
+
+.line-premium {
+    width: 150px;
+    height: 1px;
+    background: #ffffff;
+    margin: 35px auto 50px;
+}
+
+
+
+
+.carousel p{
+  color: #ffffff;
+  margin-top: 10%;
+  font-size: 200%;
+  
+  text-align: center;
+  animation: moverDerecha 2s ease-out forwards;
+  margin: 10% auto 0 auto;
+  max-width: 550px;
+}
+
+.carousel p.mostrar {
+  animation: aparecerTexto 1.2s ease-out forwards;
+}
+
+@keyframes aparecerTexto {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .track {
+  margin-top: 10%;
   display: flex;
-  gap: 60px;
+  gap: 65px;
   width: max-content;
   animation: scroll 20s linear infinite;
 }
 
 .track img {
-  height: 60px;
-
+  height: 80px;
+  
   transition: 0.3s;
 }
 
@@ -472,6 +521,45 @@ main {
   justify-items: center;
 }
 
+
+.nosotros{
+  width: 550px;     /*  tamaño de la card */
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  display: block;
+  
+}
+
+.nosotros img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+
+}
+
+.nosotros{
+  position: absolute;
+  align-items: center;
+  
+  color: #fff;
+  font-size: 40px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+
+.nosotros p{
+ background: rgba(131, 130, 130, 0.5);
+ padding: 15px;
+
+ border-radius: 15px;
+
+}
+
+
 .sbre {
   width: 400px;     /*  tamaño de la card */
   height: 400px;
@@ -488,6 +576,10 @@ main {
   object-fit: cover;
   object-position: top;
 
+}
+
+.servicis{
+  margin-top: 50%;
 }
 
 .servi{
@@ -509,11 +601,12 @@ main {
 
 }
 
-.footer {
+footer {
   background: #000;
   color: #fff;
   padding-top: 20px;
   font-family: 'Montserrat', sans-serif;
+  margin-top: 20%;
 }
 
 .top-footer {

@@ -83,7 +83,23 @@ function mostrarTitulos() {
 window.addEventListener('scroll', mostrarTitulos);
 
 
+const textoCarousel = document.querySelector(".carousel p");
 
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+      textoCarousel.classList.add("mostrar");
+    }
+
+  });
+
+}, {
+  threshold: 0.3
+});
+
+observer.observe(textoCarousel);
 
 
 const seccion = document.getElementById('seccionColor');

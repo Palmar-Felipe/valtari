@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Compra a Crédito | P.L.R Automotriz</title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="/frontend/src/css/servicis/finan.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header class="header">
+
+        <a href="../index.html" class="logo">
+
+            <span>P.L.R</span>
+
+            <small>AUTOMOTRIZ</small>
+
+        </a>
+
+
+        <button
+            class="menu-btn"
+            id="hbtn"
+        >
+
+            <span>Menú</span>
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =========================================
+         OVERLAY
+    ========================================== -->
+
+    <div
+        class="overlay"
+        id="overlay"
+    ></div>
+
+
+
+    <!-- =========================================
+         MENÚ LATERAL
+    ========================================== -->
+
+    <nav
+        class="side-menu"
+        id="side-menu"
+    >
+
+        <button
+            class="close-btn"
+            id="close-btn"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="menu-content">
+
+            <p class="menu-label">
+                P.L.R AUTOMOTRIZ
+            </p>
+
+
+            <a
+                href="/frontend/src/views/dashboard.html"
+                class="nav-item"
+            >
+                Inicio
+            </a>
+
+
+            <!-- MODELOS -->
+
+            <div
+                class="nav-item menu-expand"
+                data-sub="modelosSub"
+            >
+
+                <span>
+                    Modelos
+                </span>
+
+                <i class="fa-solid fa-chevron-right chevron"></i>
+
+            </div>
+
+
+            <div
+                class="sub-items"
+                id="modelosSub"
+            >
+
+                <a href="../viewChevrolet.html?marca=Chevrolet">
+                    Chevrolet
+                </a>
+                <a href="../viewChevrolet.html?marca=Toyota">
+                    Toyota
+                </a>
+                <a href="../viewChevrolet.html?marca=Kia">
+                    Kia
+                </a>
+                <a href="../viewChevrolet.html?marca=BMW">
+                    BMW
+                </a>
+                <a href="../viewChevrolet.html?marca=Mazda">
+                    Mazda
+                </a>
+                <a href="../viewChevrolet.html?marca=Ford">
+                    Ford
+                </a>
+                <a href="../viewChevrolet.html?marca=Hyundai">
+                    Hyundai
+                </a>
+                <a href="../viewChevrolet.html?marca=Renault">
+                    Renault
+                </a>
+                <a href="../viewChevrolet.html?marca=Nissan">
+                    Nissan
+                </a>
+                <a href="../viewChevrolet.html?marca=Mercedes">
+                    Mercedes-Benz
+                </a>
+
+            </div>
+
+
+            <a
+                href="../about us.html"
+                class="nav-item"
+            >
+                Sobre nosotros
+            </a>
+
+
+            <a
+                href="../servicis/finan.html"
+                class="nav-item active"
+            >
+                Compra a crédito
+            </a>
+            <a href="./com.html" class="nav-item">
+                Pago de contado
+            </a>
+
+            <a
+                href="contacto.html"
+                class="nav-item"
+            >
+                Contacto
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="credit-hero">
+
+
+        <div class="hero-overlay"></div>
+
+
+        <div class="hero-content">
+
+
+            <p class="hero-label">
+                FINANCIACIÓN P.L.R
+            </p>
+
+
+            <h1>
+
+                Tu próximo vehículo.
+
+                <br>
+
+                <span>
+                    Una decisión posible.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Haz realidad la compra de tu próximo vehículo
+                con una alternativa de financiación pensada
+                para acompañarte durante todo el proceso.
+
+            </p>
+
+
+            <a
+                href="#como-funciona"
+                class="hero-button"
+            >
+
+                DESCUBRE CÓMO FUNCIONA
+
+                <i class="fa-solid fa-arrow-down"></i>
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         INTRO
+    ========================================== -->
+
+    <section class="credit-intro">
+
+
+        <div class="intro-content">
+
+
+            <p class="section-label">
+                COMPRA A CRÉDITO
+            </p>
+
+
+            <h2>
+
+                El vehículo que quieres.
+
+                <span>
+                    El camino para conseguirlo.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                En P.L.R Automotriz queremos que encontrar
+                tu próximo vehículo sea una experiencia clara,
+                sencilla y acompañada.
+
+            </p>
+
+
+            <p>
+
+                Por eso ponemos a tu disposición alternativas
+                de financiación para que puedas evaluar la
+                opción que mejor se adapte a tus posibilidades.
+
+            </p>
+
+
+            <p class="small-note">
+
+                *Las condiciones de financiación, tasas,
+                plazos y aprobación dependen de la entidad
+                financiera correspondiente.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="intro-image">
+
+
+            <img
+                src="../../img/Servicess/finan/credito-hero.jpeg"
+                alt="Compra de vehículo a crédito"
+            >
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         COMO FUNCIONA
+    ========================================== -->
+
+    <section
+        class="process-section"
+        id="como-funciona"
+    >
+
+
+        <div class="section-heading">
+
+
+            <p class="section-label">
+                EL PROCESO
+            </p>
+
+
+            <h2>
+
+                Comprar puede ser
+
+                <span>
+                    más sencillo.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Te acompañamos durante cada etapa
+                para que tengas claridad antes de tomar
+                una decisión.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="process-grid">
+
+
+            <!-- 01 -->
+
+            <article class="process-card">
+
+
+                <span class="process-number">
+                    01
+                </span>
+
+
+                <div class="process-icon">
+
+                    <i class="fa-solid fa-car"></i>
+
+                </div>
+
+
+                <h3>
+                    Elige tu vehículo
+                </h3>
+
+
+                <p>
+
+                    Explora nuestra colección y encuentra
+                    el vehículo que mejor se adapte a ti.
+
+                </p>
+
+
+            </article>
+
+
+
+            <!-- 02 -->
+
+            <article class="process-card">
+
+
+                <span class="process-number">
+                    02
+                </span>
+
+
+                <div class="process-icon">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                </div>
+
+
+                <h3>
+                    Habla con nosotros
+                </h3>
+
+
+                <p>
+
+                    Cuéntanos qué vehículo te interesa
+                    y te orientaremos sobre las alternativas
+                    disponibles.
+
+                </p>
+
+
+            </article>
+
+
+
+            <!-- 03 -->
+
+            <article class="process-card">
+
+
+                <span class="process-number">
+                    03
+                </span>
+
+
+                <div class="process-icon">
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                </div>
+
+
+                <h3>
+                    Solicita financiación
+                </h3>
+
+
+                <p>
+
+                    Se realiza el proceso de solicitud
+                    con la entidad financiera correspondiente.
+
+                </p>
+
+
+            </article>
+
+
+
+            <!-- 04 -->
+
+            <article class="process-card">
+
+
+                <span class="process-number">
+                    04
+                </span>
+
+
+                <div class="process-icon">
+
+                    <i class="fa-solid fa-key"></i>
+
+                </div>
+
+
+                <h3>
+                    Hazlo realidad
+                </h3>
+
+
+                <p>
+
+                    Una vez aprobado el proceso,
+                    prepárate para recibir tu vehículo.
+
+                </p>
+
+
+            </article>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         VENTAJAS
+    ========================================== -->
+
+    <section class="benefits-section">
+
+
+        <div class="benefits-image">
+
+
+            <img
+                src="../../img/Servicess/finan/credito-auto.jpeg"
+                alt="Vehículo premium"
+            >
+
+
+        </div>
+
+
+
+        <div class="benefits-content">
+
+
+            <p class="section-label">
+                POR QUÉ FINANCIAR
+            </p>
+
+
+            <h2>
+
+                Una compra pensada
+
+                <span>
+                    para ti.
+                </span>
+
+            </h2>
+
+
+            <div class="benefit-list">
+
+
+                <div class="benefit-item">
+
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Cuida tu flujo de dinero
+                        </h3>
+
+                        <p>
+
+                            Distribuye el valor de tu compra
+                            de acuerdo con las condiciones
+                            disponibles.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit-item">
+
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Elige un plazo
+                        </h3>
+
+                        <p>
+
+                            Evalúa diferentes alternativas
+                            de plazo según tu capacidad
+                            financiera.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit-item">
+
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Acompañamiento
+                        </h3>
+
+                        <p>
+
+                            Nuestro equipo te orienta
+                            durante el proceso de compra.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="benefit-item">
+
+
+                    <div class="benefit-icon">
+
+                        <i class="fa-solid fa-file-circle-check"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Información clara
+                        </h3>
+
+                        <p>
+
+                            Conoce las condiciones antes
+                            de tomar una decisión.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         DOCUMENTOS
+    ========================================== -->
+
+    <section class="requirements-section">
+
+
+        <div class="section-heading">
+
+
+            <p class="section-label">
+                PREPARA TU SOLICITUD
+            </p>
+
+
+            <h2>
+
+                Lo que necesitas
+
+                <span>
+                    para comenzar.
+                </span>
+
+            </h2>
+
+
+            <p>
+
+                Los requisitos pueden variar según la entidad
+                financiera y el perfil del solicitante.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="requirements-grid">
+
+
+            <div class="requirement-card">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <h3>
+                    Identificación
+                </h3>
+
+                <p>
+                    Documento de identidad vigente.
+                </p>
+
+            </div>
+
+
+            <div class="requirement-card">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <h3>
+                    Información financiera
+                </h3>
+
+                <p>
+                    Información requerida para estudiar
+                    tu solicitud.
+                </p>
+
+            </div>
+
+
+            <div class="requirement-card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h3>
+                    Información laboral
+                </h3>
+
+                <p>
+                    Datos relacionados con tu actividad
+                    laboral o ingresos.
+                </p>
+
+            </div>
+
+
+            <div class="requirement-card">
+
+                <i class="fa-solid fa-check"></i>
+
+                <h3>
+                    Evaluación
+                </h3>
+
+                <p>
+                    La entidad financiera determinará
+                    las condiciones de aprobación.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         CTA
+    ========================================== -->
+
+    <section class="credit-cta">
+
+
+        <div class="cta-overlay"></div>
+
+
+        <div class="cta-content">
+
+
+            <p>
+                P.L.R AUTOMOTRIZ
+            </p>
+
+
+            <h2>
+
+                Tu próximo vehículo
+
+                <br>
+
+                puede estar más cerca.
+
+            </h2>
+
+
+            <p class="cta-description">
+
+                Cuéntanos qué vehículo estás buscando
+                y comienza a explorar tus opciones.
+
+            </p>
+
+
+            <a
+                href="https://wa.me/573018822650"
+                target="_blank"
+                class="cta-button"
+            >
+
+                HABLAR CON UN ASESOR
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="footer">
+
+
+        <div class="footer-logo">
+
+            P.L.R
+
+            <span>
+                AUTOMOTRIZ
+            </span>
+
+        </div>
+
+
+        <p>
+            Más que conducir. Es distinción.
+        </p>
+
+
+        <div class="footer-line"></div>
+
+
+        <small>
+            © 2026 P.L.R Automotriz. Todos los derechos reservados.
+        </small>
+
+
+    </footer>
+
+
+
+    <script src="/frontend/src/js/finan.js"></script>
+
+</body>
+
+</html>
